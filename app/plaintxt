@@ -1,0 +1,46 @@
+# # Path operation/route
+# @app.get("/")
+# # Decorator @ with get request for our app/ HTTP request methods and (/) root path
+# # Function &
+# def root():
+
+#     # Data for the user
+#     return {"message": "Welcome to my API"}
+
+
+# At the beginning working with DB
+# my_posts = [
+#     {"title": "title 1", "content": "content 1", "id": 1},
+#     {"title": "title 2", "content": "content 2", "id": 2},
+#  ]
+
+# # Function for finding posts, with random (not efficient)
+# def find_post(id):
+#     for p in my_posts:
+#         if p["id"] == id:
+#             return p
+
+
+# # Function for finding the index - dictionary position
+
+
+# def find_index_post(id):
+#     for i, p in enumerate(my_posts):
+#         if p["id"] == id:
+#             return i
+
+
+"""
+{
+        "Post": {
+            "content": " 6",
+            "title": "Hey 8",
+            "created_at": "2022-02-02T16:25:46.299118-05:00",
+            "id": 22,
+            "published": true,
+            "owner_id": 12
+        },
+        "likes": 0
+    }
+
+"""
