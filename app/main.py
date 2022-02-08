@@ -5,11 +5,22 @@ from .routers import post, user, auth, likes
 from .config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
-models.Base.metadata.create_all(bind=engine)
+# For adding models without alembic
+# models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.add_middleware(CORS)
+origins = [
+    "https://www.google.com",
+    "https://www.youtube.com",
+]  # or [*] for all (careful with privacy concerns)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
