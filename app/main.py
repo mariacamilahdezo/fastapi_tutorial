@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-origins = ["*"]  # or [*] for all (careful with privacy concerns)
+origins = ["http://www.google.com"]  # or [*] for all (careful with privacy concerns)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
